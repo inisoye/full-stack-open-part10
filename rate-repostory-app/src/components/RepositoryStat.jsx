@@ -15,10 +15,10 @@ const styles = StyleSheet.create({
   },
 });
 
-const RepositoryListItem = ({ statValue, statText }) => {
+const RepositoryListItem = ({ statValue, statText, testID }) => {
   return (
     <View>
-      <Text style={styles.value} fontWeight="bold">
+      <Text style={styles.value} fontWeight="bold" testID={testID}>
         {formatThousandToK(statValue)}
       </Text>
       <Text style={styles.label} color="textSecondary">

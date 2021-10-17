@@ -57,22 +57,44 @@ const RepositoryListItem = ({
         />
 
         <View style={styles.details}>
-          <Text fontWeight="bold" fontSize="subheading">
+          <Text fontWeight="bold" fontSize="subheading" testID="fullName">
             {fullName}
           </Text>
-          <Text style={styles.description} color="textSecondary">
+          <Text
+            style={styles.description}
+            color="textSecondary"
+            testID="description"
+          >
             {description}
           </Text>
           <View style={styles.language}>
-            <Text style={styles.languageText}>{language}</Text>
+            <Text style={styles.languageText} testID="language">
+              {language}
+            </Text>
           </View>
         </View>
       </View>
       <View style={styles.stats}>
-        <RepositoryStat statValue={stargazersCount} statText="Stars" />
-        <RepositoryStat statValue={forksCount} statText="Forks" />
-        <RepositoryStat statValue={reviewCount} statText="Reviews" />
-        <RepositoryStat statValue={ratingAverage} statText="Rating" />
+        <RepositoryStat
+          statValue={stargazersCount}
+          statText="Stars"
+          testID="stars"
+        />
+        <RepositoryStat
+          statValue={forksCount}
+          statText="Forks"
+          testID="forks"
+        />
+        <RepositoryStat
+          statValue={reviewCount}
+          statText="Reviews"
+          testID="reviews"
+        />
+        <RepositoryStat
+          statValue={ratingAverage}
+          statText="Rating"
+          testID="rating"
+        />
       </View>
     </View>
   );
