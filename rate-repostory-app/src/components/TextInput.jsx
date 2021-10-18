@@ -7,7 +7,6 @@ const styles = StyleSheet.create({
   },
 });
 
-// eslint-disable-next-line no-unused-vars
 const TextInput = ({ style, error, ...props }) => {
   const textInputStyle = [style, error && styles.error];
 

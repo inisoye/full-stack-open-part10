@@ -13,8 +13,8 @@ const SignIn = () => {
     const { username, password } = values;
 
     try {
-      const { data } = await signIn({ username, password });
-      console.log(data);
+      const response = await signIn({ username, password });
+      console.log(response);
 
       history.push('/');
     } catch (e) {
